@@ -530,7 +530,10 @@ class FloatingSearchBarState
   void hide() => isVisible = false;
 
   void open() => isOpen = true;
-  void close() => isOpen = false;
+    void close() {
+      isOpen = false;
+      isVisible = false;
+    }
 
   Future<bool> _onPop() async {
     if (isOpen) {
