@@ -118,14 +118,9 @@ class FloatingSearchBarAction extends StatelessWidget {
               size: size,
               color: color ?? bar?.style?.iconColor,
               duration: (duration ?? bar.transitionDuration) * 0.5,
-              onTap: () {
-                if (!isEmpty) {
+              onTap: !isEmpty ? () {
                   bar.clear();
-                } else {
-                  bar.isOpen =
-                      !bar.isOpen || (!bar.hasFocus && bar.isAlwaysOpened);
-                }
-              },
+              }: null,
             );
           },
         );
