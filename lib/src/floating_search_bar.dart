@@ -495,7 +495,7 @@ class FloatingSearchBarState
 
     if (widget.showAfter != null) {
       _translateController.value = 1.0;
-      Future.delayed(widget.showAfter, show);
+      // Future.delayed(widget.showAfter, show);//fixme pass boolean instead
     }
 
     _assignController();
